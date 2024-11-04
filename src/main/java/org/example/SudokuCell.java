@@ -55,6 +55,7 @@ public class SudokuCell extends JTextField {
         return isModifiable;
     }
 
+    //Coloring cells
     public void setModifiable(boolean modifiable) {
         isModifiable = modifiable;
         this.setEditable(modifiable);
