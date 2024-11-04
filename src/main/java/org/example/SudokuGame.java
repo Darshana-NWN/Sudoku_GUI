@@ -75,6 +75,7 @@ public class SudokuGame extends JFrame {
     }
 
     private void generateRandomSolution() {
+        //Base grid
         int[][] base = {
                 {1,2,3,4,5,6,7,8,9},
                 {4,5,6,7,8,9,1,2,3},
@@ -189,6 +190,7 @@ public class SudokuGame extends JFrame {
 
         int numbersToKeep;
         String level = (String) levelSelector.getSelectedItem();
+        //Level select hiding cells
         if (level.equals("Easy")) {
             numbersToKeep = random.nextInt(11) + 35;
         } else if (level.equals("Medium")) {
@@ -226,6 +228,7 @@ public class SudokuGame extends JFrame {
         resetBtn.setEnabled(true);
     }
 
+    //Clearing all user inputs
     private void resetGame() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -237,6 +240,7 @@ public class SudokuGame extends JFrame {
         }
     }
 
+    //Show solution
     private void showSolution() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
